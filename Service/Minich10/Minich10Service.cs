@@ -9,9 +9,9 @@ public class Minich10Service : IMinich10Service
          
             string[] restaurants = new string[10];
 
-        switch (category.ToLower())
+        switch (category.ToUpper())
         {
-            case "mexican":
+            case "MEXICAN":
                 restaurants[0] = "El Mayita";
                 restaurants[1] = "El Senor Frog's";
                 restaurants[2] = "Tepa Taqueria";
@@ -23,7 +23,7 @@ public class Minich10Service : IMinich10Service
                 restaurants[8] = "Casa Flores Mexican Restaurant";
                 restaurants[9] = "Tonantzin";
                 break;
-            case "seafood": 
+            case "SEAFOOD": 
                 restaurants[0] = "Sotto Mare Oysteria & Seafood";
                 restaurants[1] = "Captain Crab";
                 restaurants[2] = "Thanh Long";
@@ -36,7 +36,7 @@ public class Minich10Service : IMinich10Service
                 restaurants[9] = "Hog Island Oyster Co";
                 break;
 
-            case "thai":
+            case "THAI":
                 restaurants[0] = "GK Mongolian BBQ";
                 restaurants[1] = "Happy Lamb Hot Pot";
                 restaurants[2] = "Fresh Grill Mongolian BBQ";
@@ -49,7 +49,7 @@ public class Minich10Service : IMinich10Service
                 restaurants[9] = "Hunan House Mongolian BBQ & Bar";
                 break;
             default:
-                return "Not a valid input. Please type Thai, Saefood or Mexican";
+                return "Not a valid input. Please type Thai, Seafood or Mexican";
         }
 
         Random r = new();
